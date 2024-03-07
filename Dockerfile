@@ -1,4 +1,4 @@
-FROM kaggle/python:latest
+FROM kaggle/python-gpu-build:latest
 
 # install lint and static analysis tools
 COPY requirements.txt /tmp/requirements.txt
