@@ -2,15 +2,22 @@ name: Python Test
 
 on:
   push:
+    paths:
+      - "src/**"
+      - "test/**"
   pull_request:
     types: [opened, synchronize]
-
+    paths:
+      - "src/**"
+      - "test/**"
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.10.13]
+    container:
+      image: kaggle/python
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
