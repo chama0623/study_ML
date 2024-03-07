@@ -1,6 +1,3 @@
-import pytest
-
-
 def add(number1: int, number2: int) -> int:
     """number1とnumber2の加算
 
