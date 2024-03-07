@@ -38,3 +38,6 @@ jobs:
         continue-on-error: true
 
       - name: Run mypy
+        run: |
+          pip install mypy
+          mypy .
